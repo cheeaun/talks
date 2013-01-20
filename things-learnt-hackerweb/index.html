@@ -1,0 +1,324 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Things I've learnt from my Hacker News web app</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/print.css" media="print">
+	<style>
+	.slide{
+		background: #090909 none;
+		color: #fff;
+		font-size: 35px;
+	}
+	.slide h2{
+		font-size: 80px;
+		color: #fff;
+	}
+	.slide a{
+		color: lightblue;
+	}
+	.slide code{
+		color: #fff;
+		background-color: #202020;
+	}
+	.slide pre{
+		color: #fff;
+		background-color: #202020;
+		margin: 0;
+		padding: 5px 15px;
+	}
+	.slide div,
+	.slide p,
+	.slide li{
+		line-height: 1.6em;
+	}
+	.slide footer{
+		color: #000;
+	}
+	.full .slide:after{
+		visibility: hidden;
+	}
+	body.full:hover .slide:after{
+		visibility: visible;
+	}
+	#slide-start h2{
+		color: #fff;
+		position: absolute;
+		bottom: 0;
+		text-shadow: 0 5px 5px #000;
+	}
+	#slide-start img{
+		opacity: .5;
+	}
+	#slide-hn h2{
+		color: #000;
+		text-shadow: 0 0 15px #fff;
+	}
+	#slide-hn img{
+		width: 100%;
+		height: 100%;
+	}
+	.shout-screenshot{
+		text-align: right;
+	}
+	.shout-screenshot h2{
+		position: absolute;
+		bottom: 0;
+		right: 40px;
+	}
+	.shout-screenshot a{
+		color: #111;
+		border-bottom: 0;
+		text-align: right;
+	}
+	.only-screenshot{
+		text-align: center;
+	}
+	.ball-number{
+		font-size: 50%;
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		line-height: 1em;
+		padding: 15px;
+		border-radius: 50%;
+		background-color: #202020;
+	}
+	.fit{
+		width: 100%;
+	}
+	.rounded{
+		border: 1px solid #000;
+		border-radius: 5px;
+	}
+	.progress{
+		opacity: 0;
+	}
+	body:hover .progress{
+		opacity: 1;
+	}
+	</style>
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Things I've learnt from my Hacker News web app</h1>
+		<p><a href="http://cheeaun.com/">Lim Chee Aun</a> <a href="http://twitter.com/cheeaun">@cheeaun</a></p>
+	</header>
+	<section class="slide cover" id="slide-start"><div>
+		<h2>Things I've learnt from my Hacker News web app</h2>
+		<img src="images/cat-laptop.jpg" alt="">
+	</div></section>
+	<section class="slide"><div>
+		<h2>Hello, I'm Chee Aun.</h2>
+		<ul>
+			<li>Hardcore web developer.</li>
+			<li>Created quite a bunch of fun little side projects.</li>
+			<li>Tweet a lot of interesting stuff at <a href="http://twitter.com/cheeaun">@cheeaun</a></li>
+			<li>Occasionally read Hacker News.</li>
+		</ul>
+	</div></section>
+	<section class="slide shout"><div>
+		<h2>What is<br>Hacker News?</h2>
+	</div></section>
+	<section class="slide shout-screenshot cover" id="slide-hn"><div>
+		<h2><a href="http://news.ycombinator.com/">news.ycombinator.com</a></h2>
+		<img src="images/hn-frontpage.png" alt="">
+	</div></section>
+	<section class="slide shout" id="slide-hw"><div>
+		<h2>I built<br>HackerWeb.</h2>
+	</div></section>
+	<section class="slide"><div>
+		<h2>HackerWeb</h2>
+		<ul>
+			<li>A simple read-only web app client for Hacker News.</li>
+			<li>Mobile-optimized, iOS-optimized.</li>
+			<li>Works on all modern browsers, <em>hopefully</em>.</li>
+			<li>Check it out at <a href="http://hackerwebapp.com/">hackerwebapp.com</a></li>
+		</ul>
+	</div></section>
+	<section class="slide only-screenshot"><div>
+		<img src="images/hackerweb-iphone-1.png" alt="" class="rounded">
+		<img src="images/hackerweb-iphone-2.png" alt="" class="rounded">
+	</div></section>
+	<section class="slide only-screenshot"><div>
+		<img src="images/hackerweb-ipad.png" alt="" class="rounded fit">
+	</div></section>
+	<section class="slide only-screenshot"><div>
+		<img src="images/hackerweb-web.png" alt="" class="rounded fit">
+	</div></section>
+	<section class="slide"><div>
+		<h2>Cutting-edge web tech</h2>
+		<p>-webkit-overflow-scrolling: touch, localStorage, sessionStorage, CORS, Application Cache, CSS Animation, CSS Media Queries, Flexible Box Layout (old spec), requestAnimationFrame, Web Workers, and more&hellip;</p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Must-reads</h2>
+		<ul>
+			<li><a href="http://cheeaun.com/blog/2012/03/how-i-built-hacker-news-mobile-web-app">How I built the Hacker News mobile web app</a></li>
+			<li><a href="http://cheeaun.com/blog/2012/03/how-i-built-hacker-news-mobile-web-app_26">How I built the Hacker News mobile web app, Part 2</a></li>
+			<li><a href="http://cheeaun.com/blog/2012/12/introducing-hackerweb">Introducing HackerWeb</a></li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Focus on 3 things</h2>
+		<ol>
+			<li>-webkit-overflow-scrolling: touch (Momentum&nbsp;scrolling)</li>
+			<li>CORS (Cross-Origin Resource Sharing)</li>
+			<li>Application Cache</li>
+		</ol>
+	</div></section>
+	<section class="slide shout"><div>
+		<h2><span class="ball-number">1</span><br>Momentum scrolling</h2>
+	</div></section>
+	<section class="slide"><div>
+		<h2>-webkit-overflow-scrolling: touch</h2>
+		<ul>
+			<li>iOS-specific, for now. No official spec.</li>
+			<li>Introduced since iOS5 (October 2011).</li>
+			<li>For <code>overflow:scroll</code> elements.</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Before iOS5</h2>
+		<ul>
+			<li>Two fingers to scroll <code>overflow:scroll</code> elements.</li>
+			<li>Unintuitive and undiscoverable.</li>
+			<li>Scrolling libs to the rescue: <a href="https://github.com/cubiq/iscroll">iScroll</a>, <a href="https://github.com/joehewitt/scrollability">Scrollability</a>, <a href="https://github.com/davidaurelio/TouchScroll">TouchScroll</a>, <a href="https://github.com/ftlabs/ftscroller">FTScroller</a>, etc</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Starting from iOS5</h2>
+		<ul>
+			<li>One finger to scroll <code>overflow:scroll</code> elements.</li>
+			<li><code>-webkit-overflow-scrolling: touch</code> adds momentum to it.</li>
+			<li>Scrolling libs are still in used due to bugs/quirks.</li>
+			<li>Bug: <a href="https://twitter.com/rogerjohansson/status/246301734161506304">Can't scroll to top when tapping status bar</a></li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Demo time</h2>
+		<ul>
+			<li>Normal scrolling: <a href="http://jsbin.com/uhiyac/1">jsbin.com/uhiyac/1</a></li>
+			<li>Momentum scrolling: <a href="http://jsbin.com/uhiyac/2">jsbin.com/uhiyac/2</a></li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Resources</h2>
+		<ul>
+			<li><a href="http://filamentgroup.github.com/Overthrow/">Overthrow</a> &ndash; <code>overflow:auto</code> polyfill</li>
+			<li><a href="http://jquerymobile.com/demos/1.2.0/docs/pages/touchoverflow.html">jQuery Mobile: touchOverflow</a></li>
+			<li><a href="https://github.com/joelambert/ScrollFix/issues/2">Nested divs with overflow:touch</a></li>
+		</ul>
+	</div></section>
+	<section class="slide shout"><div>
+		<h2><span class="ball-number">2</span><br>CORS</h2>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Before CORS</h2>
+		<ul>
+			<li>Use JSONP.</li>
+			<li>Request data from a server in a different domain.</li>
+			<li>Example: <a href="http://json-head.appspot.com/?url=http://www.google.com/&callback=test">json-head.appspot.com/?url=http://www.google.com/&callback=test</a></li>
+			<li>A &ldquo;hack&rdquo;.</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>CORS</h2>
+		<ul>
+			<li>A <a href="http://www.w3.org/TR/cors/">W3C Working Draft</a>.</li>
+			<li>Allow JavaScript to make cross-domain requests.</li>
+			<li>An interplay between the server and the client.</li>
+		</ul>
+		<pre><code>Access-Control-Allow-Origin: *</code></pre>
+		<footer>https://github.com/cheeaun/node-hnapi/blob/master/server.js</footer>
+	</div></section>
+	<section class="slide shout"><div>
+		<h2>Use CORS<br>today!</h2>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Resources</h2>
+		<ul>
+			<li><a href="http://enable-cors.org/">Enable CORS</a></li>
+			<li><a href="http://remysharp.com/2013/01/14/cors-isnt-just-for-xhr/">CORS isn&rsquo;t just for XHR</a></li>
+			<li><a href="http://caniuse.com/cors">Can I use CORS?</a></li>
+			<li><a href="http://www.html5rocks.com/en/tutorials/cors/">Using CORS - HTML5 Rocks</a></li>
+		</ul>
+	</div></section>
+	<section class="slide shout"><div>
+		<h2><span class="ball-number">3</span><br>Application Cache</h2>
+	</div></section>
+	<section class="slide"><div>
+		<h2>AppCache</h2>
+		<ul>
+			<li><em>Easily</em> make your web site/app offline.</li>
+			<li>A <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/offline.html">working draft</a>.</li>
+			<li>A <a href="http://www.alistapart.com/articles/application-cache-is-a-douchebag/">douchebag</a>.</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Super simple steps</h2>
+		<div>Step 1.</div>
+		<pre><code>&lt;html manifest=&quot;manifest.appcache&quot;&gt;</code></pre>
+		<div>Step 2.</div>
+		<pre><code>CACHE MANIFEST
+index.html
+stylesheet.css
+&hellip;</code></pre>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Versioning</h2>
+		<pre><code>CACHE MANIFEST
+# 2013-01-21:v1
+
+index.html
+stylesheet.css
+&hellip;</code></pre>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Track AppCache versions</h2>
+		<div>Use Google Analytics' event tracking</div>
+		<img src="images/hackerweb-appcache-versions.png" alt="">
+		<footer>https://github.com/cheeaun/hackerweb/blob/master/index.html</footer>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Make local dev easier</h2>
+		<ul>
+			<li>Serve 404 for .appcache files</li>
+			<li>For HackerWeb, I use <code>node server.js <nobr>-noappcache</nobr></code></li>
+		</ul>
+		<footer>https://github.com/cheeaun/hackerweb/blob/master/server.js</footer>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Resources</h2>
+		<ul>
+			<li><a href="http://www.html5rocks.com/en/tutorials/appcache/beginner/">A Beginner's Guide to Using the Application Cache</a></li>
+			<li><a href="http://www.w3.org/community/fixing-appcache/">Fixing Application Cache Community Group</a></li>
+			<li><a href="http://appcachefacts.info/">Appcache Facts</a></li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>More resources</h2>
+		<ul>
+			<li><a href="http://moobilejs.com/">Moobile</a> &ndash; new mobile application framework built on MooTools</li>
+			<li><a href="http://maker.github.com/ratchet/">Ratchet</a> &ndash; Prototype iPhone apps with simple HTML, CSS and JS components</li>
+			<li><a href="http://www.html5rocks.com/">HTML5 Rocks</a></li>
+			<li><a href="http://caniuse.com/">Can I use&hellip;</a></li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Thanks</h2>
+		<ul>
+			<li><a href="http://cheeaun.com/">cheeaun.com</a></li>
+			<li><a href="http://twitter.com/cheeaun">twitter.com/cheeaun</a></li>
+			<li><a href="http://github.com/cheeaun">github.com/cheeaun</a></li>
+		</ul>
+		<h3>Images used in this presentation</h3>
+		<ul>
+			<li><a href="http://www.flickr.com/photos/diathesis/2262012694/">flickr.com/photos/diathesis/2262012694/</a></li>
+		</ul>
+	</div></section>
+	<div class="progress"><div></div></div>
+	<script src="shower/shower.js"></script>
+</body>
+</html>
