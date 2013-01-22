@@ -99,6 +99,26 @@
 	body:hover .progress{
 		opacity: 1;
 	}
+	
+	@media print{
+		/* A bunch of hacks to make Chrome print this as nicely as possible into PDF */
+		.slide.shout h2{
+			position: relative;
+			top: 40%;
+		}
+		.fit{
+			position: absolute;
+			width: 90%;
+			left: 50px;
+		}
+		/* End of hacks */
+		.slide:after{
+			content: none;
+		}
+		.progress{
+			display: none;
+		}
+	}
 	</style>
 </head>
 <body class="list">
