@@ -1,7 +1,7 @@
 CSS-ing the Super Silly Hackathon website
 ===
 
-A walk-through of my joruney is building a diagonal-scrolling website, [Super Silly Hackathon](https://supersillyhackathon.sg/).
+A walk-through of my journey is building a diagonal-scrolling website, [Super Silly Hackathon](https://supersillyhackathon.sg/).
 
 Presented at [Talk.CSS #23 Party Edition](https://singaporecss.github.io/23/) (Singapore CSS Meetup).
 
